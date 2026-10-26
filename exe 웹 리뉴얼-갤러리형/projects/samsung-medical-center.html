@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0e1116">
+  <meta name="description" content="공식 공개 사례는 삼성서울병원 영문 사이트와 2025년 5월부터 11월까지의 기간을 소개합니다.">
+  <title>삼성서울병원 영문 웹사이트 개편 | PROJECT | exelient</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/project-detail.css">
+  <link rel="stylesheet" href="../css/interaction.css">
+</head>
+<body>
+  <!-- @component header active=project -->
+  <div class="scroll-progress" aria-hidden="true">
+    <span></span>
+  </div>
+  <header class="site-header shell" aria-label="사이트 헤더">
+    <a class="brand" href="../index.html" aria-label="exelient 홈" data-cursor="signal">
+      <span>exelient</span>
+      <img src="../assets/images/logo-dot.svg" alt="" width="8" height="14">
+    </a>
+    <nav class="main-nav" aria-label="주요 메뉴">
+      <a href="../index.html#services" aria-haspopup="true" aria-expanded="false" aria-controls="sub-nav-panel" data-cursor="signal" data-subnav="geo">
+        GEO/SEO
+      </a>
+      <a href="../index.html#services" aria-haspopup="true" aria-expanded="false" aria-controls="sub-nav-panel" data-cursor="signal" data-subnav="ga">
+        GA
+      </a>
+      <a class="active" aria-current="page" href="../index.html#projects" aria-haspopup="true" aria-expanded="false" aria-controls="sub-nav-panel" data-cursor="signal" data-subnav="project">
+        PROJECT
+      </a>
+      <a href="../index.html#faq" aria-haspopup="true" aria-expanded="false" aria-controls="sub-nav-panel" data-cursor="signal" data-subnav="insight">
+        INSIGHT
+      </a>
+      <a href="#footer" aria-haspopup="true" aria-expanded="false" aria-controls="sub-nav-panel" data-cursor="signal" data-subnav="exelient">
+        EXELIENT
+      </a>
+    </nav>
+    <div class="header-actions">
+      <button class="locale" type="button" aria-label="언어 선택" data-cursor="signal">
+        KR
+      </button>
+      <a class="header-cta" href="#contact" data-cursor="signal" data-cursor-theme="dark">
+        GEO 진단 체험
+      </a>
+    </div>
+    <div class="sub-nav-panel" id="sub-nav-panel" aria-hidden="true">
+      <div class="sub-nav-inner" data-subnav-pane="geo" aria-label="GEO/SEO 서브 메뉴" hidden>
+        <section class="sub-nav-overview">
+          <span class="sub-nav-kicker">GEO / SEO</span>
+          <strong>
+            진단에서 콘텐츠 고도화 ·
+            <br>
+            화면 프로토타입까지
+          </strong>
+        </section>
+        <div class="sub-nav-links">
+          <div class="sub-nav-link-list">
+            <div class="sub-nav-link-column">
+              <a href="../index.html#services" data-cursor="lens">
+                <span>GEO 확장 서비스 개요</span>
+              </a>
+              <a href="../index.html#services" data-cursor="lens">
+                <span>사전 진단 · 컨설팅</span>
+              </a>
+              <a href="../index.html#services" data-cursor="lens">
+                <span>콘텐츠 고도화</span>
+              </a>
+              <a href="../index.html#services" data-cursor="lens">
+                <span>전용 채널 구축</span>
+              </a>
+            </div>
+            <div class="sub-nav-link-column">
+              <a href="../index.html#services" data-cursor="lens">
+                <span>SEO 테크 진단 · 가이드</span>
+              </a>
+              <a href="../index.html#services" data-cursor="lens">
+                <span>글로벌 현지화</span>
+              </a>
+              <a href="../index.html#services" data-cursor="lens">
+                <span>콘텐츠 작성 · 검수 기준</span>
+              </a>
+            </div>
+          </div>
+          <a class="sub-nav-all" href="#contact" data-cursor="signal">
+            <span>GEO 진단 체험</span>
+            <b aria-hidden="true">
+              ↗
+            </b>
+          </a>
+        </div>
+        <span class="sub-nav-divider" aria-hidden="true"></span>
+        <a class="sub-nav-featured" href="../index.html#services" data-cursor="lens">
+          <img src="../assets/images/subnav-geo-orbit.svg" alt="" width="320" height="200">
+          <span class="sub-nav-caption">GEO · SEO · GA 서비스 관계</span>
+        </a>
+      </div>
+      <div class="sub-nav-inner" data-subnav-pane="ga" aria-label="GA 서브 메뉴" hidden>
+        <section class="sub-nav-overview">
+          <span class="sub-nav-kicker">GA</span>
+          <strong>
+            수집 진단부터
+            <br>
+            개선 제안까지
+          </strong>
+        </section>
+        <div class="sub-nav-links">
+          <div class="sub-nav-link-list">
+            <div class="sub-nav-link-column">
+              <a href="../index.html#services" data-cursor="lens">
+                <span>GA 서비스 개요</span>
+              </a>
+              <a href="../index.html#services" data-cursor="lens">
+                <span>수집 진단</span>
+              </a>
+              <a href="../index.html#services" data-cursor="lens">
+                <span>전환 · 기여 분석</span>
+              </a>
+            </div>
+            <div class="sub-nav-link-column">
+              <a href="../index.html#services" data-cursor="lens">
+                <span>대시보드 · 리포팅</span>
+              </a>
+              <a href="../index.html#services" data-cursor="lens">
+                <span>인사이트 · 개선 제안</span>
+              </a>
+            </div>
+          </div>
+          <a class="sub-nav-all" href="../index.html#services" data-cursor="signal">
+            <span>GA 서비스 개요 보기</span>
+            <b aria-hidden="true">
+              ↗
+            </b>
+          </a>
+        </div>
+        <span class="sub-nav-divider" aria-hidden="true"></span>
+        <a class="sub-nav-featured" href="../index.html#services" data-cursor="lens">
+          <img src="../assets/images/subnav-project-chart.svg" alt="" width="320" height="200">
+          <span class="sub-nav-caption">수집 진단 → 대시보드 → 개선 제안</span>
+        </a>
+      </div>
+      <div class="sub-nav-inner" data-subnav-pane="project" aria-label="PROJECT 서브 메뉴" hidden>
+        <section class="sub-nav-overview">
+          <span class="sub-nav-kicker">PROJECT</span>
+          <strong>
+            엑셀리언트가
+            <br>
+            실제로 무엇을 해봤나
+          </strong>
+        </section>
+        <div class="sub-nav-links">
+          <div class="sub-nav-link-list">
+            <div class="sub-nav-link-column">
+              <a href="../index.html?industry=b2b#projects" data-cursor="lens" data-sub-filter="b2b">
+                <span>산업재·B2B</span>
+                <small>
+                  4
+                </small>
+              </a>
+              <a href="../index.html?industry=health#projects" data-cursor="lens" data-sub-filter="health">
+                <span>헬스케어</span>
+                <small>
+                  3
+                </small>
+              </a>
+              <a href="../index.html?industry=mobility#projects" data-cursor="lens" data-sub-filter="mobility">
+                <span>모빌리티</span>
+                <small>
+                  3
+                </small>
+              </a>
+              <a href="../index.html?industry=beauty#projects" data-cursor="lens" data-sub-filter="beauty">
+                <span>뷰티</span>
+                <small>
+                  3
+                </small>
+              </a>
+            </div>
+            <div class="sub-nav-link-column">
+              <a href="../index.html?industry=dutyfree#projects" data-cursor="lens" data-sub-filter="dutyfree">
+                <span>면세</span>
+                <small>
+                  2
+                </small>
+              </a>
+              <a href="../index.html?industry=hotel#projects" data-cursor="lens" data-sub-filter="hotel">
+                <span>숙박</span>
+                <small>
+                  2
+                </small>
+              </a>
+              <a href="../index.html?industry=consumer#projects" data-cursor="lens" data-sub-filter="consumer">
+                <span>소비재</span>
+                <small>
+                  1
+                </small>
+              </a>
+              <a href="../index.html?industry=travel#projects" data-cursor="lens" data-sub-filter="travel">
+                <span>여행·항공</span>
+                <small>
+                  1
+                </small>
+              </a>
+            </div>
+          </div>
+          <a class="sub-nav-all" href="../index.html#projects" data-cursor="signal">
+            <span>프로젝트 전체 19건</span>
+            <b aria-hidden="true">
+              ↗
+            </b>
+          </a>
+        </div>
+        <span class="sub-nav-divider" aria-hidden="true"></span>
+        <a class="sub-nav-featured" href="../index.html#projects" data-cursor="lens">
+          <img src="../assets/images/subnav-project-chart.svg" alt="" width="320" height="200">
+          <span class="sub-nav-caption">사례 문서 · 42dot 채용 페이지 GEO</span>
+        </a>
+      </div>
+      <div class="sub-nav-inner" data-subnav-pane="insight" aria-label="INSIGHT 서브 메뉴" hidden>
+        <section class="sub-nav-overview">
+          <span class="sub-nav-kicker">INSIGHT</span>
+          <strong>
+            GEO · SEO · GA
+            <br>
+            주제별 질문과 판단 기준
+          </strong>
+        </section>
+        <div class="sub-nav-links">
+          <div class="sub-nav-link-list">
+            <div class="sub-nav-link-column">
+              <a href="../index.html#faq" data-cursor="lens">
+                <span>GEO</span>
+              </a>
+              <a href="../index.html#faq" data-cursor="lens">
+                <span>SEO</span>
+              </a>
+              <a href="../index.html#faq" data-cursor="lens">
+                <span>GA</span>
+              </a>
+              <a href="../index.html#faq" data-cursor="lens">
+                <span>콘텐츠 · 정보구조</span>
+              </a>
+            </div>
+            <div class="sub-nav-link-column">
+              <a href="../index.html#faq" data-cursor="lens">
+                <span>글로벌 · 현지화</span>
+              </a>
+              <a href="../index.html#faq" data-cursor="lens">
+                <span>기여 분석 가이드</span>
+              </a>
+              <a href="../index.html#faq" data-cursor="lens">
+                <span>채널 분류 가이드</span>
+              </a>
+            </div>
+          </div>
+          <a class="sub-nav-all" href="../index.html#faq" data-cursor="signal">
+            <span>인사이트 전체</span>
+            <b aria-hidden="true">
+              ↗
+            </b>
+          </a>
+        </div>
+        <span class="sub-nav-divider" aria-hidden="true"></span>
+        <a class="sub-nav-featured" href="../index.html#faq" data-cursor="lens">
+          <span class="sub-nav-site-mock" aria-hidden="true"><span class="mock-page"><i class="mock-bar"></i><i class="mock-hero"></i><i class="mock-title"></i><i class="mock-tag"></i><i class="mock-card"></i><i class="mock-card"></i><i class="mock-card"></i></span></span>
+          <span class="sub-nav-caption">최근 인사이트</span>
+        </a>
+      </div>
+      <div class="sub-nav-inner" data-subnav-pane="exelient" aria-label="EXELIENT 서브 메뉴" hidden>
+        <section class="sub-nav-overview">
+          <span class="sub-nav-kicker">EXELIENT</span>
+          <strong>
+            회사 정체성 · 고객 ·
+            <br>
+            전문가 · 검증 기준
+          </strong>
+        </section>
+        <div class="sub-nav-links">
+          <div class="sub-nav-link-list">
+            <div class="sub-nav-link-column">
+              <a href="#footer" data-cursor="lens">
+                <span>회사 개요</span>
+              </a>
+              <a href="#footer" data-cursor="lens">
+                <span>진단 · 검증 방법</span>
+              </a>
+              <a href="#footer" data-cursor="lens">
+                <span>전문가</span>
+              </a>
+            </div>
+            <div class="sub-nav-link-column">
+              <a href="#footer" data-cursor="lens">
+                <span>클라이언트</span>
+              </a>
+              <a href="#footer" data-cursor="lens">
+                <span>채용</span>
+              </a>
+              <a href="#contact" data-cursor="lens">
+                <span>온라인 문의</span>
+              </a>
+            </div>
+          </div>
+          <a class="sub-nav-all" href="#contact" data-cursor="signal">
+            <span>온라인 문의</span>
+            <b aria-hidden="true">
+              ↗
+            </b>
+          </a>
+        </div>
+        <span class="sub-nav-divider" aria-hidden="true"></span>
+        <a class="sub-nav-featured" href="#footer" data-cursor="lens">
+          <img src="../assets/images/subnav-exelient-brand.svg" alt="" width="320" height="200">
+          <span class="sub-nav-caption">엑셀리언트 회사 개요</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- /@component -->
+  <main>
+    <section class="case-hero" id="top" data-surface="dark">
+      <div class="case-hero-inner shell">
+        <div class="case-meta" data-animate>
+          <nav class="case-breadcrumb" aria-label="현재 위치">
+            <a href="../index.html#projects" data-cursor="signal">
+              PROJECT
+            </a>
+            / 삼성서울병원
+          </nav>
+          <ul class="case-tags" aria-label="분류">
+            <li>
+              사례 문서
+            </li>
+            <li>
+              헬스케어
+            </li>
+            <li>
+              GEO · SEO
+            </li>
+          </ul>
+        </div>
+        <div class="case-intro" data-animate>
+          <h1>
+            삼성서울병원 영문 웹사이트 개편
+          </h1>
+          <p class="case-lead">공식 공개 사례는 삼성서울병원 영문 사이트와 2025년 5월부터 11월까지의 기간을 소개합니다.</p>
+          <p class="case-byline">작성 EXELIENT 콘텐츠팀 · 검수 EXELIENT GEO팀</p>
+        </div>
+      </div>
+    </section>
+    <div class="case-body">
+      <div class="case-layout shell">
+        <nav class="case-toc" aria-label="목차">
+          <span class="case-toc-label">목차</span>
+          <ol>
+            <li>
+              <a class="is-active" href="#problem" aria-current="true" data-cursor="lens">
+                <span>01  문제</span>
+              </a>
+            </li>
+            <li>
+              <a href="#cause" data-cursor="lens">
+                <span>02  원인</span>
+              </a>
+            </li>
+            <li>
+              <a href="#action" data-cursor="lens">
+                <span>03  개입</span>
+              </a>
+            </li>
+            <li>
+              <a href="#change" data-cursor="lens">
+                <span>04  변화</span>
+              </a>
+            </li>
+            <li>
+              <a href="#system" data-cursor="lens">
+                <span>05  체계</span>
+              </a>
+            </li>
+          </ol>
+        </nav>
+        <article class="case-article">
+          <section class="case-section is-active" id="problem" aria-labelledby="problem-title">
+            <p class="case-section-label"><span class="case-step">01</span><span class="case-section-name">문제</span></p>
+            <h2 id="problem-title">
+              무엇이 문제였나
+            </h2>
+            <p class="case-statement">[원고 대기] 개편 과정에서 검색 관점으로 확인해야 했던 문제를 한 문장으로</p>
+            <p class="case-text">공개 소개는 영문 사이트 개편에서 검색 관점의 진단 역할을 설명합니다. 환자 정보나 의료적 효과에 대한 주장을 포함하지 않습니다.</p>
+            <figure class="case-figure">
+              <img src="../assets/images/삼성서울병원.png" alt="개편 전 화면 예시" width="691" height="397">
+            </figure>
+          </section>
+          <section class="case-section" id="cause" aria-labelledby="cause-title">
+            <p class="case-section-label"><span class="case-step">02</span><span class="case-section-name">원인</span></p>
+            <h2 id="cause-title">
+              왜 그랬나
+            </h2>
+            <ol class="case-causes">
+              <li class="case-cause">
+                <span class="case-cause-num">01</span>
+                <div>
+                  <h3>
+                    구조
+                  </h3>
+                  <p>[원고 대기] 원인 한 문장</p>
+                </div>
+              </li>
+              <li class="case-cause">
+                <span class="case-cause-num">02</span>
+                <div>
+                  <h3>
+                    콘텐츠
+                  </h3>
+                  <p>[원고 대기] 원인 한 문장</p>
+                </div>
+              </li>
+              <li class="case-cause">
+                <span class="case-cause-num">03</span>
+                <div>
+                  <h3>
+                    기술
+                  </h3>
+                  <p>[원고 대기] 원인 한 문장</p>
+                </div>
+              </li>
+            </ol>
+          </section>
+          <section class="case-section" id="action" aria-labelledby="action-title">
+            <p class="case-section-label"><span class="case-step">03</span><span class="case-section-name">개입</span></p>
+            <h2 id="action-title">
+              엑셀리언트는 무엇을 했나
+            </h2>
+            <dl class="case-defs">
+              <div>
+                <dt>
+                  수행 항목
+                </dt>
+                <dd>
+                  [수행 기록 확인]
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  산출물
+                </dt>
+                <dd>
+                  [산출물명]
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  협업 범위
+                </dt>
+                <dd>
+                  [협업사 범위 확인]
+                </dd>
+              </div>
+            </dl>
+          </section>
+          <section class="case-section" id="change" aria-labelledby="change-title">
+            <p class="case-section-label"><span class="case-step">04</span><span class="case-section-name">변화</span></p>
+            <h2 id="change-title">
+              무엇이 달라졌나
+            </h2>
+            <div class="case-compare">
+              <figure class="case-figure">
+                <img src="../assets/images/case-browser-before.svg" alt="개편 전 화면 예시" width="335" height="193">
+              </figure>
+              <figure class="case-figure">
+                <img src="../assets/images/case-browser-after.svg" alt="개편 후 화면 예시" width="335" height="193">
+              </figure>
+            </div>
+            <div class="case-result">
+              <small>
+                정량 결과
+              </small>
+              <strong>
+                공개 전
+              </strong>
+              <p>원천 자료와 비교 조건을 확보한 뒤 공개합니다.</p>
+            </div>
+          </section>
+          <section class="case-section" id="system" aria-labelledby="system-title">
+            <p class="case-section-label"><span class="case-step">05</span><span class="case-section-name">체계</span></p>
+            <h2 id="system-title">
+              무엇이 남았나
+            </h2>
+            <dl class="case-defs">
+              <div>
+                <dt>
+                  운영 주체
+                </dt>
+                <dd>
+                  [확인 필요]
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  갱신 주기
+                </dt>
+                <dd>
+                  [확인 필요]
+                </dd>
+              </div>
+            </dl>
+            <a class="case-doc-link" href="../insight/global-localization.html" data-cursor="signal">
+              관련 문서 · 글로벌 현지화
+              <span aria-hidden="true">→</span>
+            </a>
+          </section>
+        </article>
+        <aside class="case-facts" aria-labelledby="facts-title">
+          <h2 id="facts-title">
+            Overview
+          </h2>
+          <dl>
+            <div>
+              <dt>
+                고객사
+              </dt>
+              <dd>
+                삼성서울병원
+              </dd>
+            </div>
+            <div>
+              <dt>
+                업종
+              </dt>
+              <dd>
+                헬스케어
+              </dd>
+            </div>
+            <div>
+              <dt>
+                대상 사이트
+              </dt>
+              <dd>
+                영문 웹사이트
+              </dd>
+            </div>
+            <div>
+              <dt>
+                기간
+              </dt>
+              <dd>
+                2025.05 – 2025.11
+              </dd>
+            </div>
+            <div>
+              <dt>
+                서비스
+              </dt>
+              <dd>
+                GEO · SEO
+              </dd>
+            </div>
+            <div>
+              <dt>
+                역할
+              </dt>
+              <dd>
+                검색 관점 진단
+              </dd>
+            </div>
+            <div>
+              <dt>
+                결과
+              </dt>
+              <dd>
+                정량 결과 공개 전
+              </dd>
+            </div>
+          </dl>
+          <a class="btn-primary" href="#contact" data-cursor="signal">
+            프로젝트 문의
+          </a>
+        </aside>
+      </div>
+    </div>
+    <section class="case-judgment" aria-labelledby="judgment-title" data-surface="dark">
+      <div class="shell" data-animate>
+        <p class="case-eyebrow">HUMAN EDGE · 판단 기록</p>
+        <h2 id="judgment-title">
+          누가 판단했고, 무엇을 보류했나
+        </h2>
+        <dl class="judgment-grid">
+          <div>
+            <dt>
+              판단
+            </dt>
+            <dd>
+              EXELIENT GEO팀
+            </dd>
+          </div>
+          <div>
+            <dt>
+              담은 것
+            </dt>
+            <dd>
+              공식 공개 사례의 기간 · 범위
+            </dd>
+          </div>
+          <div>
+            <dt>
+              보류한 것
+            </dt>
+            <dd>
+              정량 결과 · 협업사 업무 경계
+            </dd>
+          </div>
+          <div>
+            <dt>
+              한계
+            </dt>
+            <dd>
+              고객명 공개와 수행 역할의 최신 확인 필요
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+    <section class="case-sources" aria-labelledby="sources-title">
+      <div class="shell" data-animate>
+        <h2 id="sources-title">
+          출처
+        </h2>
+        <blockquote class="source-quote">
+          <p id="source-quote-text">삼성서울병원 영문 사례는 2025.05~2025.11의 기간과 개편의 검색 관점 진단을 소개한다.</p>
+          <cite>
+            exelient.co.kr/project/samsung-medical-center-en/
+          </cite>
+        </blockquote>
+        <div class="source-actions">
+          <button class="btn-secondary" type="button" data-copy-from="#source-quote-text" data-cursor="signal">
+            인용 문장 복사
+          </button>
+          <button class="btn-secondary" type="button" data-copy="https://exelient.co.kr/project/samsung-medical-center-en/" data-cursor="signal">
+            URL 복사
+          </button>
+        </div>
+        <p class="visually-hidden" role="status" aria-live="polite" data-copy-status></p>
+      </div>
+    </section>
+    <section class="faq faq--case" id="faq">
+      <div class="shell">
+        <h2 data-animate>
+          자주 묻는 질문
+        </h2>
+        <div class="faq-list" data-animate>
+          <article class="faq-item open">
+            <button type="button" data-cursor="lens" aria-expanded="true">
+              <strong>
+                이 프로젝트에서 엑셀리언트는 무엇을 했나요?
+              </strong>
+              <span class="faq-icon" aria-hidden="true"><img src="../assets/images/icon-plus.svg" alt="" width="24" height="24"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>영문 사이트 개편에서 검색 관점의 진단을 맡았습니다. 실제 담당 범위는 수행 기록 확인 후 확정합니다.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button type="button" data-cursor="lens" aria-expanded="false">
+              <strong>
+                성과 수치가 없는 이유는 무엇인가요?
+              </strong>
+              <span class="faq-icon" aria-hidden="true"><img src="../assets/images/icon-plus.svg" alt="" width="24" height="24"></span>
+            </button>
+            <div class="faq-answer" inert>
+              <div class="faq-answer-inner">
+                <p>[원고 대기]</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button type="button" data-cursor="lens" aria-expanded="false">
+              <strong>
+                같은 업종 사례가 더 있나요?
+              </strong>
+              <span class="faq-icon" aria-hidden="true"><img src="../assets/images/icon-plus.svg" alt="" width="24" height="24"></span>
+            </button>
+            <div class="faq-answer" inert>
+              <div class="faq-answer-inner">
+                <p>[원고 대기]</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="case-more" aria-label="다른 사례">
+      <div class="shell">
+        <nav class="case-pager" aria-label="이전 · 다음 사례" data-animate>
+          <a href="./lotte-hotel-eshop.html" rel="prev" data-cursor="lens">
+            <small>
+              ← 이전 사례
+            </small>
+            <strong>
+              롯데호텔 이숍
+            </strong>
+          </a>
+          <a href="./42dot-careers.html" rel="next" data-cursor="lens">
+            <small>
+              다음 사례 →
+            </small>
+            <strong>
+              42dot Careers
+            </strong>
+          </a>
+        </nav>
+        <div class="case-related" data-animate>
+          <h2>
+            같은 업종의 프로젝트
+          </h2>
+          <div class="related-grid">
+            <a class="related-card" href="./id-hospital.html" data-cursor="lens">
+              <span class="related-top"><span class="related-sector">헬스케어</span><span class="related-arrow" aria-hidden="true">→</span></span>
+              <strong class="related-name">
+                아이디병원
+              </strong>
+              <span class="related-tags"><i class="tag">GEO · SEO</i><i class="status-tag"><img src="../assets/images/progress-badge-dot.svg" alt="" width="8" height="8">진행 중</i></span>
+            </a>
+            <a class="related-card" href="./samsung-biologics.html" data-cursor="lens">
+              <span class="related-top"><span class="related-sector">헬스케어</span><span class="related-arrow" aria-hidden="true">→</span></span>
+              <strong class="related-name">
+                삼성바이오로직스
+              </strong>
+              <span class="related-tags"><i class="tag">GEO · SEO</i><i class="status-tag"><img src="../assets/images/progress-badge-dot.svg" alt="" width="8" height="8">진행 중</i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- @component cta -->
+    <section class="contact" id="contact" data-section="contact">
+      <div class="shell" data-animate>
+        <h2>
+          비슷한 과제가 있나요
+          <img src="../assets/images/cta-mark.svg" alt="" width="16" height="32">
+        </h2>
+        <p>사이트 주소, 개선하려는 목표, 현재 분석 환경을 알려주시면 진단 범위를 정리해 회신합니다.</p>
+        <a href="mailto:hello@exelient.co.kr" data-cursor="signal" data-cursor-theme="dark" data-cursor-lens="ink">
+          프로젝트 문의 ↗
+        </a>
+      </div>
+    </section>
+    <!-- /@component -->
+  </main>
+  <!-- @component footer -->
+  <footer class="site-footer" id="footer" data-section="footer">
+    <div class="footer-inner">
+      <div class="footer-grid" data-animate>
+        <div class="footer-about">
+          <a class="footer-brand" href="#top" data-cursor="signal">
+            [ ].exelient
+          </a>
+          <p>엑셀리언트(EXELIENT)<br>검색과 생성형 답변에서 정확하게 설명되는 콘텐츠</p>
+        </div>
+        <div class="footer-col">
+          <h3>
+            GEO/SEO
+          </h3>
+          <ul>
+            <li>
+              GEO 확장 서비스 개요
+            </li>
+            <li>
+              사전 진단 · 컨설팅
+            </li>
+            <li>
+              콘텐츠 고도화
+            </li>
+            <li>
+              SEO 테크 진단 · 가이드
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>
+            GA
+          </h3>
+          <ul>
+            <li>
+              GA 서비스 개요
+            </li>
+            <li>
+              수집 진단
+            </li>
+            <li>
+              대시보드 · 리포팅
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>
+            EXELIENT
+          </h3>
+          <ul>
+            <li>
+              회사 개요
+            </li>
+            <li>
+              클라이언트
+            </li>
+            <li>
+              채용
+            </li>
+            <li>
+              온라인 문의
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>개인정보 처리방침 · 이용약관 · © 2026 EXELIENT · exelient.co.kr</p>
+      </div>
+    </div>
+  </footer>
+  <!-- /@component -->
+  <!-- @component floating-cta -->
+  <a class="fab" href="#contact" aria-label="GEO 진단 체험" data-surface="dark">
+    <svg class="fab-stroke" aria-hidden="true" focusable="false">
+      <rect x="0" y="0" width="100%" height="100%" rx="7" ry="7" pathLength="100"></rect>
+    </svg>
+    <img class="fab-bracket fab-bracket--open" src="../assets/images/fab-bracket-open.svg" alt="">
+    <span class="fab-label">GEO 진단 체험</span>
+    <img class="fab-bracket fab-bracket--close" src="../assets/images/fab-bracket-close.svg" alt="">
+    <img class="fab-dot" src="../assets/images/fab-dot.svg" alt="">
+    <span class="fab-exe" aria-hidden="true">exe</span>
+  </a>
+  <!-- /@component -->
+  <script src="../js/common.js"></script>
+  <script src="../js/project-detail.js"></script>
+  <script src="../js/smooth-scroll.js"></script>
+  <script src="../js/interaction.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+/* Signal · Pull · Act cursor interaction
+   Custom cursor rules apply only while interaction.js sets html.has-exe-cursor
+   (fine pointer + hover, no reduced motion, viewport > 900px). */
+
+/* Native cursor: hidden only when the custom cursor is live; text fields keep theirs */
+.has-exe-cursor,.has-exe-cursor *{cursor:none!important}
+.has-exe-cursor :is(input,textarea,select,[contenteditable]:not([contenteditable="false"])){cursor:text!important}
+
+/* Cursor: 12px dot, hidden while a lens is open */
+.exe-cursor{--exe-cursor-color:#0f1217;position:fixed;z-index:2147483001;top:0;left:0;width:0;height:0;pointer-events:none;will-change:transform;transition:opacity .2s ease}
+.exe-cursor.is-on-dark{--exe-cursor-color:#f2f4f7}
+.exe-cursor.is-out,.exe-cursor.is-native{opacity:0}
+.exe-cursor__dot{position:absolute;top:0;left:0;width:12px;height:12px;border-radius:50%;background:var(--exe-cursor-color);translate:-50% -50%;pointer-events:none;transition:opacity .2s ease,background-color .2s ease}
+.exe-cursor.is-lens .exe-cursor__dot{opacity:0}
+
+/* Lens: full-viewport layer revealed through a circular clip.
+   Inside it everything is two colours: lime fill + black content (black fill + lime content on lime targets). */
+.exe-lens{position:fixed;inset:0;z-index:2147483000;overflow:hidden;pointer-events:none;clip-path:circle(0px at -100px -100px);will-change:clip-path}
+.exe-lens__fill{position:absolute;inset:0;background:var(--lens-fill,#e4f222)}
+.exe-lens__clone{position:absolute;inset:0;color:var(--lens-ink,#0f1217)}
+.exe-lens__label{transform-origin:50% 50%}
+.exe-lens__clone,.exe-lens__clone *{color:var(--lens-ink,#0f1217)!important;background:none!important;border-color:var(--lens-ink,#0f1217)!important;box-shadow:none!important;text-shadow:none!important;outline:none!important;opacity:1!important}
+.exe-lens__clone img{filter:brightness(0)}
+.exe-lens.is-ink .exe-lens__clone img{visibility:hidden}
+/* Lens stroke: only on dark surfaces, drawn light (#f2f4f7); light surfaces get no stroke */
+.exe-lens-ring{position:fixed;z-index:2147483000;top:0;left:0;width:0;height:0;border:1.5px solid #f2f4f7;border-radius:50%;opacity:0;pointer-events:none;will-change:transform;transition:opacity .15s ease}
+.exe-lens-ring.is-visible.is-on-dark{opacity:1}
+
+/* Pull/press use the individual translate/scale properties, so keep them out of existing transitions */
+.has-exe-cursor [data-cursor="signal"]{transition-property:color,background-color,border-color,box-shadow,opacity}
+
+/* Hover fills that would fight the lens are switched off while the custom cursor is live
+   (without it, e.g. touch or reduced motion, the original :hover styles stay as the fallback) */
+.has-exe-cursor .header-cta:hover{background:transparent;color:var(--on-dark);border-color:var(--muted)}
+.has-exe-cursor .contact a:hover{transform:none;box-shadow:none}
+.has-exe-cursor .more-row button:hover{color:var(--ink-900);background:none}
+.has-exe-cursor .project-expanded a:hover{color:var(--ink-900);background:none}
+.has-exe-cursor .sub-nav-all:hover{background:#f0f2f5;transform:none}
+.has-exe-cursor .sub-nav-link-column a:hover{color:inherit;transform:none}
+.has-exe-cursor .filter-option:not(.active):hover{background:none}
+
+/* Keyboard path (works with or without the custom cursor) */
+[data-cursor="signal"]:focus-visible{background:#e4f222;color:#0f1217;outline:2px solid #e4f222;outline-offset:2px}
+.contact a[data-cursor="signal"]:focus-visible{background:#0f1217;color:#e4f222;outline-color:#f2f4f7}
+:is(.site-header .brand,.main-nav a,.locale)[data-cursor]{position:relative}
+:is(.site-header .brand,.main-nav a,.locale)[data-cursor]:focus-visible{background:none;color:var(--on-dark);outline:none}
+:is(.site-header .brand,.main-nav a,.locale)[data-cursor]:focus-visible::after{content:'';position:absolute;left:50%;bottom:-8px;width:24px;height:2px;background:#e4f222;transform:translateX(-50%)}
+[data-cursor="lens"]:focus-visible{outline:2px solid #0f1217;outline-offset:2px}

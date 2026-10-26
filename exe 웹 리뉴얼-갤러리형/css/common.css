@@ -1,0 +1,185 @@
+/* Shared foundation for every page: fonts, tokens, base, and the repeated components
+   (header + sub-nav, tag/badge, FAQ, CTA, footer). Page styles live in index.css / project-detail.css. */
+@font-face{font-family:Pretendard;src:url('../assets/fonts/Pretendard-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:Pretendard;src:url('../assets/fonts/Pretendard-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:Pretendard;src:url('../assets/fonts/Pretendard-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:Pretendard;src:url('../assets/fonts/Pretendard-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:Pretendard;src:url('../assets/fonts/Pretendard-ExtraBold.woff2') format('woff2');font-weight:800;font-display:swap}
+@font-face{font-family:Pretendard;src:url('../assets/fonts/Pretendard-Black.woff2') format('woff2');font-weight:900;font-display:swap}
+
+:root{
+  --ink-900:#0f1217;--ink-700:#2e3540;--ink-600:#4b5361;--ink-400:#7e8898;--ink-300:#8d96a5;--ink-200:#c2c8d1;--ink-150:#e0e4e9;--ink-100:#e9ecf0;--ink-50:#f3f5f7;
+  --paper:#fff;--sunk:#f0f2f5;--lime:#e4f222;--dark:#0e1116;--on-dark:#f2f4f7;--muted:#9aa3b0;--hairline:#2a2f37;--shell:1440px;
+  --header-h:80px;--sticky-top:104px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink-900);background:var(--paper);font-family:Pretendard,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+button,input{font:inherit}
+button,input{color:inherit}
+button{border:0;background:none;cursor:pointer}
+a{color:inherit;text-decoration:none}
+p,h1,h2,h3,strong{margin:0}
+img{display:block}
+[hidden]{display:none!important}
+.visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.shell{width:min(var(--shell),calc(100% - 64px));margin-inline:auto}
+.scroll-progress{position:fixed;inset:0 0 auto;z-index:100;height:2px;pointer-events:none}
+.scroll-progress span{display:block;width:100%;height:100%;background:var(--lime);transform:scaleX(0);transform-origin:left}
+
+/* Header (components/header.html) */
+.site-header{position:fixed;z-index:999;top:0;left:50%;height:80px;display:flex;align-items:center;gap:40px;transform:translateX(-50%);isolation:isolate}
+.site-header::before{content:'';position:absolute;z-index:0;top:0;left:50%;width:100vw;height:100%;pointer-events:none;background:rgba(5,6,7,0);transform:translateX(-50%);transition:background .3s ease,backdrop-filter .3s ease,border-color .3s ease;border-bottom:1px solid transparent}
+.site-header.is-scrolled::before{background:rgba(5,6,7,.84);border-color:rgba(224,228,233,.1);backdrop-filter:blur(16px)}
+.site-header:hover::before,.site-header.is-subnav-open::before{background:#0e1116;border-color:#2a2f37;backdrop-filter:none}
+.brand{position:relative;z-index:2;display:inline-flex;align-items:flex-end;gap:2px;width:max-content;color:var(--on-dark);font-size:24px;font-weight:700;line-height:32px;letter-spacing:-.24px}
+.brand img{flex:none}
+.main-nav{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:40px;margin-left:auto}
+.main-nav a{position:relative;color:var(--muted);font-size:16px;font-weight:500;line-height:24px;transition:color .25s ease}
+.main-nav a:hover,.main-nav a.active,.main-nav a[aria-expanded="true"]{color:var(--on-dark);font-weight:700}
+.main-nav a.active::after,.main-nav a[aria-expanded="true"]::after{content:'';position:absolute;left:50%;bottom:-8px;width:24px;height:2px;background:var(--lime);transform:translateX(-50%)}
+/* While a panel is open, the underline follows the open menu instead of the current page */
+.site-header.is-subnav-open .main-nav a.active:not([aria-expanded="true"]):not(:hover){color:var(--muted);font-weight:500}
+.site-header.is-subnav-open .main-nav a.active:not([aria-expanded="true"])::after{content:none}
+.header-actions{position:relative;z-index:2;display:flex;align-items:center;gap:40px;margin-left:auto}
+.locale{color:var(--muted);font-size:16px;font-weight:500;line-height:24px}
+.header-cta{height:40px;padding:0 20px;border:1px solid var(--muted);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;color:var(--on-dark);font-size:16px;font-weight:700;transition:.25s ease}
+.header-cta:hover{color:var(--ink-900);border-color:var(--lime);background:var(--lime)}
+.sub-nav-panel{position:absolute;z-index:1;top:80px;left:50%;width:100vw;overflow:hidden;color:#0f1217;background:#fff;border-bottom:1px solid #e0e4e9;box-shadow:0 4px 16px rgba(22,19,15,.08);font-family:Pretendard,'Noto Sans KR',sans-serif;opacity:0;visibility:hidden;pointer-events:none;clip-path:inset(0 0 100% 0);transform:translate(-50%,-8px);transform-origin:top;transition:opacity .2s ease,transform .24s cubic-bezier(.22,.8,.24,1),clip-path .24s cubic-bezier(.22,.8,.24,1),height .24s cubic-bezier(.22,.8,.24,1),visibility 0s linear .24s}
+.site-header.is-subnav-open .sub-nav-panel{opacity:1;visibility:visible;pointer-events:auto;clip-path:inset(0 0 -24px 0);transform:translate(-50%,0);transition-delay:0s}
+.sub-nav-inner{width:min(var(--shell),calc(100% - 64px));margin-inline:auto;padding:48px 0 56px;display:flex;align-items:stretch;gap:64px}
+.sub-nav-inner.is-entering{animation:sub-nav-swap .24s ease both}
+@keyframes sub-nav-swap{from{opacity:0}to{opacity:1}}
+.sub-nav-overview{flex:none;width:320px;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.sub-nav-kicker{color:#7e8898;font-size:12px;font-weight:700;line-height:16px;letter-spacing:.48px}
+.sub-nav-overview strong{font-size:24px;font-weight:700;line-height:1.5;letter-spacing:-.24px}
+.sub-nav-links{flex:1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+.sub-nav-link-list{display:flex;align-items:flex-start;gap:48px;width:100%}
+.sub-nav-link-column{width:240px;display:flex;flex-direction:column}
+.sub-nav-link-column a{width:100%;padding:8px 0;display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:16px;font-weight:700;line-height:1.5;white-space:nowrap;transition:color .2s ease,transform .2s ease}
+.sub-nav-link-column a:hover,.sub-nav-link-column a:focus-visible{color:#5c6b00;transform:translateX(3px)}
+.sub-nav-link-column small{flex:none;color:#7e8898;font-size:12px;font-weight:700;line-height:1.5;letter-spacing:.48px}
+.sub-nav-all{padding:12px 20px;border-radius:6px;display:inline-flex;align-items:center;gap:12px;color:#0f1217;background:#f0f2f5;font-size:16px;font-weight:500;line-height:1.5;white-space:nowrap;transition:background .2s ease,transform .2s ease}
+.sub-nav-all:hover,.sub-nav-all:focus-visible{background:var(--ink-150);transform:translateY(-1px)}
+.sub-nav-all b{font-weight:500}
+.sub-nav-panel [data-subnav-pane="project"] .sub-nav-all b{font-weight:700}
+.sub-nav-divider{flex:none;width:1px;align-self:stretch;background:#e0e4e9}
+.sub-nav-featured{flex:none;width:320px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.sub-nav-featured img{width:320px;height:200px}
+.sub-nav-caption{color:#7e8898;font-size:12px;font-weight:700;line-height:16px;letter-spacing:.48px;transition:color .2s ease}
+.sub-nav-featured:hover .sub-nav-caption,.sub-nav-featured:focus-visible .sub-nav-caption{color:#0f1217}
+/* INSIGHT visual: site thumbnail drawn with DS fills */
+.sub-nav-site-mock{position:relative;display:block;width:320px;height:200px;overflow:hidden;border-radius:6px;background:var(--ink-50)}
+.mock-page{position:absolute;top:24px;left:16px;width:288px;height:176px;overflow:hidden;border-radius:4px;background:#fff}
+.mock-page i{position:absolute;display:block}
+.mock-bar{top:0;left:0;width:288px;height:16px;background:#e9ecf0}
+.mock-hero{top:16px;left:0;width:288px;height:60px;background:var(--ink-900)}
+.mock-title{top:32px;left:16px;width:96px;height:10px;border-radius:2px;background:var(--on-dark)}
+.mock-tag{top:52px;left:16px;width:38px;height:12px;border-radius:2px;background:var(--lime)}
+.mock-card{top:92px;width:80px;height:60px;border-radius:3px;background:var(--ink-50)}
+.mock-card:nth-of-type(5){left:16px}.mock-card:nth-of-type(6){left:112px}.mock-card:nth-of-type(7){left:208px}
+
+/* Tag (pill) + status badge — project cards and related cards */
+.tag,.status-tag{height:24px;font-style:normal;font-size:12px;font-weight:700;line-height:18px;letter-spacing:.48px;display:inline-flex;align-items:center}
+.tag{padding:0 10px;border:1px solid var(--ink-150);border-radius:999px;color:var(--ink-700)}
+.status-tag{gap:6px;padding:0 10px 0 8px;border-radius:4px;color:var(--ink-700);background:var(--sunk)}
+
+/* FAQ (accordion behaviour in common.js) */
+.faq{padding:128px 0;background:#fff}
+.faq h2{margin-bottom:40px;font-size:40px;font-weight:700;line-height:48px;letter-spacing:-.8px}
+.faq-list{width:100%}
+.faq-item{border-top:1px solid var(--ink-150)}.faq-item:first-child{border-color:var(--ink-900)}
+/* Open/close: question row's bottom space (24→12), answer height (0→content) and icon turn all run
+   together over .5s; the answer text fades/slides in just after the panel starts opening. Rest heights
+   match Figma: closed 89 (1 + 24 + 40 + 24), open 125 (1 + 24 + 40 + 12 + 24 + 24). */
+.faq-item button{width:100%;padding:24px 0;display:flex;align-items:center;gap:16px;text-align:left;transition:padding-bottom .5s ease}
+.faq-item.open button{padding-bottom:12px}.faq-item button strong{flex:1;font-size:24px;font-weight:700;line-height:36px;letter-spacing:-.24px}
+/* 40px icon box + 24px plus (Figma basil:plus-solid); opening rotates it 45° clockwise into ×, closing returns it */
+.faq-icon{flex:none;width:40px;height:40px;border:1px solid var(--ink-150);border-radius:4px;display:grid;place-items:center}
+.faq-icon img{width:24px;height:24px;transition:all .5s}
+.faq-item.open .faq-icon img{transform:rotate(45deg)}
+.faq-answer{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s ease}
+.faq-item.open .faq-answer{grid-template-rows:1fr}
+.faq-answer-inner{min-height:0;overflow:hidden}
+.faq-answer p{padding:0 0 24px;color:var(--ink-600);font-size:16px;line-height:24px;opacity:0;transform:translateY(-8px);transition:opacity .2s ease,transform .5s ease}
+.faq-item.open .faq-answer p{opacity:1;transform:none;transition:opacity .4s ease .1s,transform .5s ease}
+
+/* CTA (components/cta.html) */
+.contact{height:492px;padding:128px 0;background:var(--dark);color:var(--on-dark)}
+.contact h2{height:86px;display:flex;align-items:flex-end;gap:4px;font-size:72px;font-weight:900;line-height:86px;letter-spacing:-2.16px}.contact h2 img{margin-bottom:0;flex:none}
+.contact p{margin-top:24px;color:var(--muted);font-size:20px;line-height:30px}
+.contact a{height:56px;width:max-content;margin-top:40px;padding:0 32px;border-radius:4px;background:var(--lime);color:var(--ink-900);display:flex;align-items:center;font-size:16px;font-weight:700;line-height:24px;transition:transform .2s ease,box-shadow .2s ease}.contact a:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(228,242,34,.16)}
+
+/* Floating CTA (components/floating-cta.html) — Figma 160:2187 "GEO Floating Button / 03 프리시전 블록".
+   Closed 60×56 shows "[ ]."; on hover/focus the right edge stays put and the box opens leftward to 220×56:
+   "[" rides the left edge, "]" + dot slide left together, the label appears between the brackets and "exe"
+   after the dot, while a lime stroke runs around the rounded border.
+   Spacing between parts is Figma's (bracket↔label 7, bracket↔dot 2.5, dot centre↔exe centre 26.5); the
+   whole ink block is centred in the box in both states (measured Pretendard ExtraBold: label 106.43, exe 40.1):
+   closed block 43.5 wide → 8.25 each side; open block 190.75 wide → 14.63 each side; vertical centre 28. */
+.fab{--fab-ease:cubic-bezier(.65,0,.35,1);--fab-time:.5s;--fab-lap:2.4s;position:fixed;z-index:900;right:40px;bottom:40px;width:60px;height:56px;overflow:hidden;border-radius:8px;background:var(--dark);color:var(--on-dark);box-shadow:inset 0 0 0 1px #e0e4e9;transition:width var(--fab-time) var(--fab-ease),box-shadow .3s ease}
+.fab:hover,.fab:focus-visible{width:220px}
+.fab:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+.fab-bracket,.fab-dot,.fab-label,.fab-exe{position:absolute;pointer-events:none}
+.fab-bracket{top:14.5px;width:9.5px;height:27px;transition:left var(--fab-time) var(--fab-ease),right var(--fab-time) var(--fab-ease)}
+.fab-bracket--open{left:8.25px}
+.fab-bracket--close{right:14.75px}
+.fab-dot{top:37px;right:8.25px;width:4px;height:4px;transition:right var(--fab-time) var(--fab-ease)}
+/* label line box 25.2 with its ink centred at 12.6 → top 15.4 puts the ink centre on 28 */
+.fab-label{top:15.4px;left:31.13px;font-size:18px;font-weight:800;line-height:1.4;letter-spacing:-.18px;white-space:nowrap;opacity:0;transform:translateX(8px);transition:opacity .15s ease,transform var(--fab-time) var(--fab-ease)}
+/* exe line box 12 with baseline at 14.5 → top 26 sets the baseline 0.5 above the dot's bottom (as in Figma) */
+.fab-exe{top:26px;right:34.94px;color:var(--lime);font-size:24px;font-weight:800;line-height:.5;letter-spacing:-.24px;white-space:nowrap;opacity:0;transform:translateX(calc(50% + 8px));transition:opacity .15s ease,transform var(--fab-time) var(--fab-ease)}
+.fab:hover .fab-bracket--open,.fab:focus-visible .fab-bracket--open{left:14.63px}
+.fab:hover .fab-bracket--close,.fab:focus-visible .fab-bracket--close{right:65.94px}
+.fab:hover .fab-dot,.fab:focus-visible .fab-dot{right:59.44px}
+.fab:hover .fab-label,.fab:focus-visible .fab-label{opacity:1;transform:none;transition:opacity .35s ease .12s,transform var(--fab-time) var(--fab-ease)}
+.fab:hover .fab-exe,.fab:focus-visible .fab-exe{opacity:1;transform:translateX(50%);transition:opacity .35s ease .18s,transform var(--fab-time) var(--fab-ease)}
+/* Lime stroke: one short 2px line (15% of the outline) running clockwise around the border's centre path
+   (inset 1px, radius 7 → outer radius 8) over the 1px grey outline, one lap per --fab-lap.
+   Head 100% → tail 15% opacity: common.js splits the line into slices (each a step further along the path
+   via --k and a step more opaque); the two end slices get round caps. Without JS it is one plain dash. */
+.fab-stroke{position:absolute;inset:1px;width:calc(100% - 2px);height:calc(100% - 2px);overflow:visible;pointer-events:none;opacity:0;transition:opacity .3s ease}
+.fab:hover .fab-stroke,.fab:focus-visible .fab-stroke{opacity:1}
+.fab-stroke rect{fill:none;stroke:var(--lime);stroke-width:2;stroke-linecap:butt;stroke-dasharray:15 85;stroke-dashoffset:0}
+.fab-stroke rect.is-cap{stroke-linecap:round}
+.fab:hover .fab-stroke rect,.fab:focus-visible .fab-stroke rect{animation:fab-orbit var(--fab-lap) linear infinite;animation-delay:calc(var(--fab-lap) * var(--k, 0) * -1)}
+@keyframes fab-orbit{to{stroke-dashoffset:-100}}
+
+/* Footer (components/footer.html) */
+.site-footer{height:399px;padding:88px 0 40px;color:var(--muted);background:var(--dark);}
+.footer-inner{width:min(1400px,calc(100% - 64px));margin-inline:auto}
+.footer-grid{min-height:151.75px;display:flex;align-items:flex-start;gap:120px}
+.footer-about{flex:none;width:360px}
+.footer-brand{display:inline-block;color:var(--on-dark);font-size:22px;font-weight:900;line-height:normal;letter-spacing:-.88px;white-space:nowrap}
+.footer-about p{padding-top:16px;font-size:14px;line-height:1.6;letter-spacing:-.14px}
+.footer-col h3{color:var(--on-dark);font-size:13px;font-weight:700;line-height:1.4}
+.footer-col ul{margin:0;padding:16px 0 0;list-style:none}.footer-col li{font-size:14px;line-height:1.6;letter-spacing:-.14px;white-space:nowrap}
+.footer-bottom{margin-top:48px;padding-top:48px;border-top:1px solid var(--ink-150)}.footer-bottom p{font-size:13px;line-height:1.5}
+
+/* Scroll motion reaches the exact static layout at rest */
+[data-animate].is-inview{animation:enter .72s cubic-bezier(.2,.7,.2,1) both}
+@keyframes enter{from{opacity:.3;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+@media (max-width:1200px){
+  .shell{width:min(100% - 48px,1000px)}
+  .main-nav{gap:22px}.header-actions{gap:18px}.sub-nav-inner{width:calc(100% - 48px);gap:32px}.sub-nav-overview{width:220px}.sub-nav-link-list{gap:24px}.sub-nav-divider,.sub-nav-featured{display:none}
+  .footer-grid{gap:64px}.footer-about{width:300px}
+}
+
+@media (max-width:900px){
+  :root{--header-h:72px;--sticky-top:96px}
+  .shell{width:calc(100% - 40px)}
+  .site-header{height:72px}.brand{font-size:21px}.main-nav,.locale,.sub-nav-panel{display:none}.header-actions{margin-left:auto}
+  .faq{padding:88px 0}.faq-item button strong{font-size:20px;line-height:30px}
+  .contact{height:auto;padding:96px 0}.contact h2{height:auto;font-size:54px;line-height:1.2}.contact h2 img{margin-bottom:4px}.site-footer{height:auto;padding:72px 0 40px}.footer-inner{width:calc(100% - 40px)}.footer-grid{min-height:0;display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:40px 48px}.footer-about{grid-column:1/-1;width:auto}.footer-bottom{margin-top:40px;padding-top:32px}
+}
+
+@media (max-width:600px){
+  .fab{right:20px;bottom:20px}
+  .shell{width:calc(100% - 32px)}
+  .header-cta{height:36px;padding:0 14px;font-size:13px}
+  .faq{padding:72px 0}.faq h2{font-size:32px}.faq-item button{padding:20px 0}.faq-item.open button{padding-bottom:8px}.faq-item button strong{font-size:18px;line-height:27px}.faq-answer p{padding-right:0}
+  .contact{padding:80px 0}.contact h2{font-size:42px}.contact h2 img{transform:scale(.8);transform-origin:left bottom}.contact p{font-size:17px;line-height:28px}.footer-inner{width:calc(100% - 32px)}.footer-grid{grid-template-columns:1fr 1fr}.footer-col li{white-space:normal}
+}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.sub-nav-panel{transition:none!important}.fab-stroke{opacity:0!important}}

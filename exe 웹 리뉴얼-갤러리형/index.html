@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0e1116">
+  <meta name="description" content="엑셀리언트 프로젝트 — GEO, SEO, GA 실행 사례">
+  <title>PROJECT | exelient</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/interaction.css">
+</head>
+<body>
+  <!-- @component header active=project -->
+  <div class="scroll-progress" aria-hidden="true">
+    <span></span>
+  </div>
+  <header class="site-header shell" aria-label="사이트 헤더">
+    <a class="brand" href="./index.html" aria-label="exelient 홈" data-cursor="signal">
+      <span>exelient</span>
+      <img src="./assets/images/logo-dot.svg" alt="" width="8" height="14">
+    </a>
+    <nav class="main-nav" aria-label="주요 메뉴">
+      <a href="./index.html#services" aria-haspopup="true" aria-expanded="false" aria-controls="sub-nav-panel" data-cursor="signal" data-subnav="geo">
+        GEO/SEO
+      </a>
+      <a href="./index.html#services" aria-haspopup="true" aria-expanded="false" aria-controls="sub-nav-panel" data-cursor="signal" data-subnav="ga">
+        GA
+      </a>
+      <a class="active" aria-current="page" href="./index.html#projects" aria-haspopup="true" aria-expanded="false" aria-controls="sub-nav-panel" data-cursor="signal" data-subnav="project">
+        PROJECT
+      </a>
+      <a href="./index.html#faq" aria-haspopup="true" aria-expanded="false" aria-controls="sub-nav-panel" data-cursor="signal" data-subnav="insight">
+        INSIGHT
+      </a>
+      <a href="#footer" aria-haspopup="true" aria-expanded="false" aria-controls="sub-nav-panel" data-cursor="signal" data-subnav="exelient">
+        EXELIENT
+      </a>
+    </nav>
+    <div class="header-actions">
+      <button class="locale" type="button" aria-label="언어 선택" data-cursor="signal">
+        KR
+      </button>
+      <a class="header-cta" href="#contact" data-cursor="signal" data-cursor-theme="dark">
+        GEO 진단 체험
+      </a>
+    </div>
+    <div class="sub-nav-panel" id="sub-nav-panel" aria-hidden="true">
+      <div class="sub-nav-inner" data-subnav-pane="geo" aria-label="GEO/SEO 서브 메뉴" hidden>
+        <section class="sub-nav-overview">
+          <span class="sub-nav-kicker">GEO / SEO</span>
+          <strong>
+            진단에서 콘텐츠 고도화 ·
+            <br>
+            화면 프로토타입까지
+          </strong>
+        </section>
+        <div class="sub-nav-links">
+          <div class="sub-nav-link-list">
+            <div class="sub-nav-link-column">
+              <a href="./index.html#services" data-cursor="lens">
+                <span>GEO 확장 서비스 개요</span>
+              </a>
+              <a href="./index.html#services" data-cursor="lens">
+                <span>사전 진단 · 컨설팅</span>
+              </a>
+              <a href="./index.html#services" data-cursor="lens">
+                <span>콘텐츠 고도화</span>
+              </a>
+              <a href="./index.html#services" data-cursor="lens">
+                <span>전용 채널 구축</span>
+              </a>
+            </div>
+            <div class="sub-nav-link-column">
+              <a href="./index.html#services" data-cursor="lens">
+                <span>SEO 테크 진단 · 가이드</span>
+              </a>
+              <a href="./index.html#services" data-cursor="lens">
+                <span>글로벌 현지화</span>
+              </a>
+              <a href="./index.html#services" data-cursor="lens">
+                <span>콘텐츠 작성 · 검수 기준</span>
+              </a>
+            </div>
+          </div>
+          <a class="sub-nav-all" href="#contact" data-cursor="signal">
+            <span>GEO 진단 체험</span>
+            <b aria-hidden="true">
+              ↗
+            </b>
+          </a>
+        </div>
+        <span class="sub-nav-divider" aria-hidden="true"></span>
+        <a class="sub-nav-featured" href="./index.html#services" data-cursor="lens">
+          <img src="./assets/images/subnav-geo-orbit.svg" alt="" width="320" height="200">
+          <span class="sub-nav-caption">GEO · SEO · GA 서비스 관계</span>
+        </a>
+      </div>
+      <div class="sub-nav-inner" data-subnav-pane="ga" aria-label="GA 서브 메뉴" hidden>
+        <section class="sub-nav-overview">
+          <span class="sub-nav-kicker">GA</span>
+          <strong>
+            수집 진단부터
+            <br>
+            개선 제안까지
+          </strong>
+        </section>
+        <div class="sub-nav-links">
+          <div class="sub-nav-link-list">
+            <div class="sub-nav-link-column">
+              <a href="./index.html#services" data-cursor="lens">
+                <span>GA 서비스 개요</span>
+              </a>
+              <a href="./index.html#services" data-cursor="lens">
+                <span>수집 진단</span>
+              </a>
+              <a href="./index.html#services" data-cursor="lens">
+                <span>전환 · 기여 분석</span>
+              </a>
+            </div>
+            <div class="sub-nav-link-column">
+              <a href="./index.html#services" data-cursor="lens">
+                <span>대시보드 · 리포팅</span>
+              </a>
+              <a href="./index.html#services" data-cursor="lens">
+                <span>인사이트 · 개선 제안</span>
+              </a>
+            </div>
+          </div>
+          <a class="sub-nav-all" href="./index.html#services" data-cursor="signal">
+            <span>GA 서비스 개요 보기</span>
+            <b aria-hidden="true">
+              ↗
+            </b>
+          </a>
+        </div>
+        <span class="sub-nav-divider" aria-hidden="true"></span>
+        <a class="sub-nav-featured" href="./index.html#services" data-cursor="lens">
+          <img src="./assets/images/subnav-project-chart.svg" alt="" width="320" height="200">
+          <span class="sub-nav-caption">수집 진단 → 대시보드 → 개선 제안</span>
+        </a>
+      </div>
+      <div class="sub-nav-inner" data-subnav-pane="project" aria-label="PROJECT 서브 메뉴" hidden>
+        <section class="sub-nav-overview">
+          <span class="sub-nav-kicker">PROJECT</span>
+          <strong>
+            엑셀리언트가
+            <br>
+            실제로 무엇을 해봤나
+          </strong>
+        </section>
+        <div class="sub-nav-links">
+          <div class="sub-nav-link-list">
+            <div class="sub-nav-link-column">
+              <a href="./index.html?industry=b2b#projects" data-cursor="lens" data-sub-filter="b2b">
+                <span>산업재·B2B</span>
+                <small>
+                  4
+                </small>
+              </a>
+              <a href="./index.html?industry=health#projects" data-cursor="lens" data-sub-filter="health">
+                <span>헬스케어</span>
+                <small>
+                  3
+                </small>
+              </a>
+              <a href="./index.html?industry=mobility#projects" data-cursor="lens" data-sub-filter="mobility">
+                <span>모빌리티</span>
+                <small>
+                  3
+                </small>
+              </a>
+              <a href="./index.html?industry=beauty#projects" data-cursor="lens" data-sub-filter="beauty">
+                <span>뷰티</span>
+                <small>
+                  3
+                </small>
+              </a>
+            </div>
+            <div class="sub-nav-link-column">
+              <a href="./index.html?industry=dutyfree#projects" data-cursor="lens" data-sub-filter="dutyfree">
+                <span>면세</span>
+                <small>
+                  2
+                </small>
+              </a>
+              <a href="./index.html?industry=hotel#projects" data-cursor="lens" data-sub-filter="hotel">
+                <span>숙박</span>
+                <small>
+                  2
+                </small>
+              </a>
+              <a href="./index.html?industry=consumer#projects" data-cursor="lens" data-sub-filter="consumer">
+                <span>소비재</span>
+                <small>
+                  1
+                </small>
+              </a>
+              <a href="./index.html?industry=travel#projects" data-cursor="lens" data-sub-filter="travel">
+                <span>여행·항공</span>
+                <small>
+                  1
+                </small>
+              </a>
+            </div>
+          </div>
+          <a class="sub-nav-all" href="./index.html#projects" data-cursor="signal">
+            <span>프로젝트 전체 19건</span>
+            <b aria-hidden="true">
+              ↗
+            </b>
+          </a>
+        </div>
+        <span class="sub-nav-divider" aria-hidden="true"></span>
+        <a class="sub-nav-featured" href="./index.html#projects" data-cursor="lens">
+          <img src="./assets/images/subnav-project-chart.svg" alt="" width="320" height="200">
+          <span class="sub-nav-caption">사례 문서 · 42dot 채용 페이지 GEO</span>
+        </a>
+      </div>
+      <div class="sub-nav-inner" data-subnav-pane="insight" aria-label="INSIGHT 서브 메뉴" hidden>
+        <section class="sub-nav-overview">
+          <span class="sub-nav-kicker">INSIGHT</span>
+          <strong>
+            GEO · SEO · GA
+            <br>
+            주제별 질문과 판단 기준
+          </strong>
+        </section>
+        <div class="sub-nav-links">
+          <div class="sub-nav-link-list">
+            <div class="sub-nav-link-column">
+              <a href="./index.html#faq" data-cursor="lens">
+                <span>GEO</span>
+              </a>
+              <a href="./index.html#faq" data-cursor="lens">
+                <span>SEO</span>
+              </a>
+              <a href="./index.html#faq" data-cursor="lens">
+                <span>GA</span>
+              </a>
+              <a href="./index.html#faq" data-cursor="lens">
+                <span>콘텐츠 · 정보구조</span>
+              </a>
+            </div>
+            <div class="sub-nav-link-column">
+              <a href="./index.html#faq" data-cursor="lens">
+                <span>글로벌 · 현지화</span>
+              </a>
+              <a href="./index.html#faq" data-cursor="lens">
+                <span>기여 분석 가이드</span>
+              </a>
+              <a href="./index.html#faq" data-cursor="lens">
+                <span>채널 분류 가이드</span>
+              </a>
+            </div>
+          </div>
+          <a class="sub-nav-all" href="./index.html#faq" data-cursor="signal">
+            <span>인사이트 전체</span>
+            <b aria-hidden="true">
+              ↗
+            </b>
+          </a>
+        </div>
+        <span class="sub-nav-divider" aria-hidden="true"></span>
+        <a class="sub-nav-featured" href="./index.html#faq" data-cursor="lens">
+          <span class="sub-nav-site-mock" aria-hidden="true"><span class="mock-page"><i class="mock-bar"></i><i class="mock-hero"></i><i class="mock-title"></i><i class="mock-tag"></i><i class="mock-card"></i><i class="mock-card"></i><i class="mock-card"></i></span></span>
+          <span class="sub-nav-caption">최근 인사이트</span>
+        </a>
+      </div>
+      <div class="sub-nav-inner" data-subnav-pane="exelient" aria-label="EXELIENT 서브 메뉴" hidden>
+        <section class="sub-nav-overview">
+          <span class="sub-nav-kicker">EXELIENT</span>
+          <strong>
+            회사 정체성 · 고객 ·
+            <br>
+            전문가 · 검증 기준
+          </strong>
+        </section>
+        <div class="sub-nav-links">
+          <div class="sub-nav-link-list">
+            <div class="sub-nav-link-column">
+              <a href="#footer" data-cursor="lens">
+                <span>회사 개요</span>
+              </a>
+              <a href="#footer" data-cursor="lens">
+                <span>진단 · 검증 방법</span>
+              </a>
+              <a href="#footer" data-cursor="lens">
+                <span>전문가</span>
+              </a>
+            </div>
+            <div class="sub-nav-link-column">
+              <a href="#footer" data-cursor="lens">
+                <span>클라이언트</span>
+              </a>
+              <a href="#footer" data-cursor="lens">
+                <span>채용</span>
+              </a>
+              <a href="#contact" data-cursor="lens">
+                <span>온라인 문의</span>
+              </a>
+            </div>
+          </div>
+          <a class="sub-nav-all" href="#contact" data-cursor="signal">
+            <span>온라인 문의</span>
+            <b aria-hidden="true">
+              ↗
+            </b>
+          </a>
+        </div>
+        <span class="sub-nav-divider" aria-hidden="true"></span>
+        <a class="sub-nav-featured" href="#footer" data-cursor="lens">
+          <img src="./assets/images/subnav-exelient-brand.svg" alt="" width="320" height="200">
+          <span class="sub-nav-caption">엑셀리언트 회사 개요</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- /@component -->
+  <main>
+    <section class="hero" id="top" data-section="top" data-surface="dark">
+      <div class="hero-bg" aria-hidden="true">
+        <img class="hero-bg-graphic" src="./assets/images/hero-luminous.jpg" alt="" width="1024" height="1024">
+        <img class="hero-bg-stars" src="./assets/images/hero-orbit-stars.png" alt="" width="1254" height="1254">
+        <img class="hero-ring hero-ring--sm" src="./assets/images/hero-ring-sm.svg" alt="" width="108" height="108">
+        <img class="hero-ring hero-ring--md" src="./assets/images/hero-ring-md.svg" alt="" width="134" height="134">
+        <img class="hero-ring hero-ring--lg" src="./assets/images/hero-ring-lg.svg" alt="" width="196" height="196">
+      </div>
+      <svg class="hero-morph" viewBox="-120 -120 240 240" width="240" height="240" aria-hidden="true" focusable="false">
+        <defs>
+          <radialGradient id="hero-morph-flash-fill">
+            <stop offset="0" stop-color="#e4f222" stop-opacity="1"></stop>
+            <stop offset=".45" stop-color="#e4f222" stop-opacity=".45"></stop>
+            <stop offset="1" stop-color="#e4f222" stop-opacity="0"></stop>
+          </radialGradient>
+        </defs>
+        <circle class="hero-morph-flash" r="0"></circle>
+        <circle class="hero-morph-outer" r="46"></circle>
+        <ellipse class="hero-morph-orbit" rx="0" ry="0"></ellipse>
+        <circle class="hero-morph-sat" r="0"></circle>
+        <circle class="hero-morph-core" r="6"></circle>
+      </svg>
+      <div class="hero-inner shell">
+        <div class="hero-copy" data-animate>
+          <img class="hero-spark" src="./assets/images/hero-spark.svg" alt="" width="12" height="12">
+          <h1>
+            <span><span class="hero-accent">가능성</span>은 연결될 때</span>
+            <br>
+            성장의 생태계가 됩니다.
+          </h1>
+          <p>각각의 신호를 발견하고, 맥락으로 연결하고,<br>실행과 검증을 통해 지속 가능한 성장 구조로 만듭니다.</p>
+        </div>
+        <div class="hero-proof" id="services" data-section="services">
+          <div class="proof-grid" aria-label="프로젝트 통계" data-animate>
+            <article class="proof-card proof-total">
+              <p class="proof-label"><img src="./assets/images/tile-status-dot.svg" alt="" width="10" height="10">PUBLIC PROJECTS</p>
+              <div>
+                <strong class="count" data-count="19">
+                  19
+                </strong>
+                <span>현재 공개 기준으로 확인 가능한 전체 프로젝트</span>
+              </div>
+            </article>
+            <article class="proof-card proof-small">
+              <p class="proof-label"><i class="square muted"></i>IN PROGRESS</p>
+              <div>
+                <strong class="count" data-count="9" data-pad="2">
+                  09
+                </strong>
+                <span>진행 중인 프로젝트</span>
+              </div>
+            </article>
+            <article class="proof-card proof-small">
+              <p class="proof-label"><i class="square lime"></i>COMPLETED</p>
+              <div>
+                <strong class="count" data-count="10" data-pad="2">
+                  10
+                </strong>
+                <span>완료된 프로젝트</span>
+              </div>
+            </article>
+          </div>
+          <div class="proof-copy" data-animate>
+            <img class="proof-orbit" src="./assets/images/proof-orbit-mark.svg" alt="" width="93" height="65">
+            <h2>
+              성과를 말하기 전에,
+              <br>
+              <span><span class="hero-accent">실행</span>의 상태를 공개합니다.</span>
+            </h2>
+            <p>프로젝트는 시작된 순간보다, 어떻게 연결되고<br>끝까지 검증되는지가 더 중요합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projects" id="projects" data-section="projects">
+      <div class="project-layout shell">
+        <aside class="filters" aria-label="프로젝트 필터" data-animate>
+          <fieldset class="filter-group">
+            <legend>
+              서비스
+            </legend>
+            <button class="filter-option active" type="button" data-cursor="lens" data-group="service" data-value="all">
+              <span>전체</span>
+              <b>
+                19
+              </b>
+            </button>
+            <button class="filter-option" type="button" data-cursor="lens" data-group="service" data-value="geo">
+              <span>GEO</span>
+              <b>
+                11
+              </b>
+            </button>
+            <button class="filter-option" type="button" data-cursor="lens" data-group="service" data-value="seo">
+              <span>SEO</span>
+              <b>
+                17
+              </b>
+            </button>
+            <button class="filter-option" type="button" data-cursor="lens" data-group="service" data-value="ga">
+              <span>GA</span>
+              <b>
+                10
+              </b>
+            </button>
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend>
+              업종
+            </legend>
+            <button class="filter-option" type="button" data-cursor="lens" data-group="industry" data-value="b2b">
+              <span>산업재·B2B</span>
+              <b>
+                4
+              </b>
+            </button>
+            <button class="filter-option" type="button" data-cursor="lens" data-group="industry" data-value="health">
+              <span>헬스케어</span>
+              <b>
+                3
+              </b>
+            </button>
+            <button class="filter-option" type="button" data-cursor="lens" data-group="industry" data-value="mobility">
+              <span>모빌리티</span>
+              <b>
+                3
+              </b>
+            </button>
+            <button class="filter-option" type="button" data-cursor="lens" data-group="industry" data-value="beauty">
+              <span>뷰티</span>
+              <b>
+                3
+              </b>
+            </button>
+            <button class="filter-option" type="button" data-cursor="lens" data-group="industry" data-value="dutyfree">
+              <span>면세</span>
+              <b>
+                2
+              </b>
+            </button>
+            <button class="filter-option" type="button" data-cursor="lens" data-group="industry" data-value="hotel">
+              <span>숙박</span>
+              <b>
+                2
+              </b>
+            </button>
+            <button class="filter-option" type="button" data-cursor="lens" data-group="industry" data-value="consumer">
+              <span>소비재</span>
+              <b>
+                1
+              </b>
+            </button>
+            <button class="filter-option" type="button" data-cursor="lens" data-group="industry" data-value="travel">
+              <span>여행·항공</span>
+              <b>
+                1
+              </b>
+            </button>
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend>
+              상태
+            </legend>
+            <button class="filter-option" type="button" data-cursor="lens" data-group="status" data-value="progress">
+              <span>진행 중</span>
+              <b>
+                9
+              </b>
+            </button>
+            <button class="filter-option" type="button" data-cursor="lens" data-group="status" data-value="complete">
+              <span>완료</span>
+              <b>
+                10
+              </b>
+            </button>
+          </fieldset>
+          <button class="filter-reset" type="button" data-cursor="signal">
+            초기화
+            <span aria-hidden="true">↺</span>
+          </button>
+        </aside>
+        <div class="project-column" data-animate>
+          <div class="project-toolbar">
+            <h2>
+              프로젝트
+              <span id="result-count">19</span>
+            </h2>
+            <div class="toolbar-spacer"></div>
+            <label class="search-box">
+              <input id="project-search" type="search" placeholder="고객명 · 업종으로 검색" autocomplete="off" aria-label="프로젝트 검색">
+              <img src="./assets/images/search-icon.svg" alt="" width="24" height="24">
+            </label>
+            <button class="sort-button" id="sort-button" type="button" data-cursor="signal">
+              최신순 ▾
+            </button>
+          </div>
+          <article class="case-feature" data-project data-cursor="lens" data-industry="health" data-service="geo seo" data-status="progress" data-name="삼성서울병원" data-search="삼성서울병원 헬스케어 geo seo 사례 문서">
+            <div class="case-feature-body">
+              <div class="case-feature-copy">
+                <p class="case-feature-meta">사례 문서 · 헬스케어 · 진행 중</p>
+                <h3>
+                  <a href="./projects/samsung-medical-center.html">
+                    삼성서울병원 — 신규 반응형 사이트의 검색 정보 설계
+                  </a>
+                </h3>
+                <p class="case-feature-desc">의료 정보가 검색과 생성형 답변에 정확히 연결되도록 정보 구조를 설계했습니다. [원고 대기]</p>
+              </div>
+              <p class="case-feature-foot"><span class="case-feature-service">GEO · SEO</span><span class="case-feature-link" aria-hidden="true">사례 문서 보기 →</span></p>
+            </div>
+            <img class="case-feature-image" src="./assets/images/case-samsung-medical-center.png" alt="삼성서울병원 신규 반응형 사이트 첫 화면" width="1920" height="945" loading="lazy">
+          </article>
+          <div class="gallery-grid" id="project-list">
+            <article class="gallery-card" data-project data-cursor="lens" data-industry="b2b" data-service="geo" data-status="progress" data-name="세스코 / 세스코몰" data-search="세스코 세스코몰 산업재 b2b geo">
+              <div class="gallery-cover" aria-hidden="true">
+                <span class="gallery-cover-name">세스코 / 세스코몰</span>
+                <span class="gallery-cover-service">GEO</span>
+                <span class="gallery-cover-orbit"><img class="gallery-cover-ring" src="./assets/images/gallery-cover-ring-lg.svg" alt="" width="200" height="200"><img class="gallery-cover-ring gallery-cover-ring--sm" src="./assets/images/gallery-cover-ring-sm.svg" alt="" width="110" height="110"><img class="gallery-cover-dot" src="./assets/images/gallery-cover-dot.svg" alt="" width="12" height="12"></span>
+              </div>
+              <p class="gallery-meta"><span>산업재·B2B</span><span aria-hidden="true">·</span><span>진행 중</span></p>
+              <h3>
+                <a href="./projects/cesco.html">
+                  세스코 / 세스코몰
+                </a>
+              </h3>
+              <p class="gallery-desc">콘텐츠 · 구조화 데이터 가이드, 질의응답 콘텐츠 정비</p>
+              <dl class="gallery-fact">
+                <dt>
+                  측정 전
+                </dt>
+                <dd>
+                  진행 중 — 성과 측정 전
+                </dd>
+              </dl>
+              <p class="gallery-service">GEO</p>
+            </article>
+            <article class="gallery-card" data-project data-cursor="lens" data-industry="health" data-service="geo seo" data-status="progress" data-name="아이디병원" data-search="아이디병원 헬스케어 geo seo">
+              <div class="gallery-cover" aria-hidden="true">
+                <span class="gallery-cover-name">아이디병원</span>
+                <span class="gallery-cover-service">GEO · SEO</span>
+                <span class="gallery-cover-orbit"><img class="gallery-cover-ring" src="./assets/images/gallery-cover-ring-lg.svg" alt="" width="200" height="200"><img class="gallery-cover-ring gallery-cover-ring--sm" src="./assets/images/gallery-cover-ring-sm.svg" alt="" width="110" height="110"><img class="gallery-cover-dot" src="./assets/images/gallery-cover-dot.svg" alt="" width="12" height="12"></span>
+              </div>
+              <p class="gallery-meta"><span>헬스케어</span><span aria-hidden="true">·</span><span>진행 중</span></p>
+              <h3>
+                <a href="./projects/id-hospital.html">
+                  아이디병원
+                </a>
+              </h3>
+              <p class="gallery-desc">검색엔진 · 생성형 엔진 콘텐츠 최적화</p>
+              <dl class="gallery-fact">
+                <dt>
+                  측정 전
+                </dt>
+                <dd>
+                  진행 중 — 성과 측정 전
+                </dd>
+              </dl>
+              <p class="gallery-service">GEO · SEO</p>
+            </article>
+            <article class="gallery-card" data-project data-cursor="lens" data-industry="mobility" data-service="geo seo ga" data-status="progress" data-name="기아" data-search="기아 kia 모빌리티 geo seo ga">
+              <div class="gallery-cover" aria-hidden="true">
+                <span class="gallery-cover-name">기아</span>
+                <span class="gallery-cover-service">GEO · SEO · GA</span>
+                <span class="gallery-cover-orbit"><img class="gallery-cover-ring" src="./assets/images/gallery-cover-ring-lg.svg" alt="" width="200" height="200"><img class="gallery-cover-ring gallery-cover-ring--sm" src="./assets/images/gallery-cover-ring-sm.svg" alt="" width="110" height="110"><img class="gallery-cover-dot" src="./assets/images/gallery-cover-dot.svg" alt="" width="12" height="12"></span>
+              </div>
+              <p class="gallery-meta"><span>모빌리티</span><span aria-hidden="true">·</span><span>진행 중</span></p>
+              <h3>
+                <a href="./projects/kia.html">
+                  기아
+                </a>
+              </h3>
+              <p class="gallery-desc">글로벌 37개 사이트 진단 · 국가별 생성형 검색 대응</p>
+              <dl class="gallery-fact">
+                <dt>
+                  47%
+                </dt>
+                <dd>
+                  자연 검색 증가 · 조건 확인 중 ⓘ
+                </dd>
+              </dl>
+              <p class="gallery-service">GEO · SEO · GA</p>
+            </article>
+            <article class="gallery-card" data-project data-cursor="lens" data-industry="health" data-service="geo seo" data-status="progress" data-name="삼성바이오로직스" data-search="삼성바이오로직스 헬스케어 geo seo">
+              <div class="gallery-cover" aria-hidden="true">
+                <span class="gallery-cover-name">삼성바이오로직스</span>
+                <span class="gallery-cover-service">GEO · SEO</span>
+                <span class="gallery-cover-orbit"><img class="gallery-cover-ring" src="./assets/images/gallery-cover-ring-lg.svg" alt="" width="200" height="200"><img class="gallery-cover-ring gallery-cover-ring--sm" src="./assets/images/gallery-cover-ring-sm.svg" alt="" width="110" height="110"><img class="gallery-cover-dot" src="./assets/images/gallery-cover-dot.svg" alt="" width="12" height="12"></span>
+              </div>
+              <p class="gallery-meta"><span>헬스케어</span><span aria-hidden="true">·</span><span>진행 중</span></p>
+              <h3>
+                <a href="./projects/samsung-biologics.html">
+                  삼성바이오로직스
+                </a>
+              </h3>
+              <p class="gallery-desc">국 · 영문 검색 콘텐츠 최적화, 생성형 검색 가이드</p>
+              <dl class="gallery-fact">
+                <dt>
+                  측정 전
+                </dt>
+                <dd>
+                  진행 중 — 성과 측정 전
+                </dd>
+              </dl>
+              <p class="gallery-service">GEO · SEO</p>
+            </article>
+            <article class="gallery-card" data-project data-cursor="lens" data-industry="consumer" data-service="geo seo" data-status="progress" data-name="HY 한국야쿠르트" data-search="hy 한국야쿠르트 소비재 geo seo">
+              <div class="gallery-cover" aria-hidden="true">
+                <span class="gallery-cover-name">HY 한국야쿠르트</span>
+                <span class="gallery-cover-service">GEO · SEO</span>
+                <span class="gallery-cover-orbit"><img class="gallery-cover-ring" src="./assets/images/gallery-cover-ring-lg.svg" alt="" width="200" height="200"><img class="gallery-cover-ring gallery-cover-ring--sm" src="./assets/images/gallery-cover-ring-sm.svg" alt="" width="110" height="110"><img class="gallery-cover-dot" src="./assets/images/gallery-cover-dot.svg" alt="" width="12" height="12"></span>
+              </div>
+              <p class="gallery-meta"><span>소비재</span><span aria-hidden="true">·</span><span>진행 중</span></p>
+              <h3>
+                <a href="./projects/hy.html">
+                  HY 한국야쿠르트
+                </a>
+              </h3>
+              <p class="gallery-desc">기업 사이트 · 프레딧 검색 / 생성형 검색 진단</p>
+              <dl class="gallery-fact">
+                <dt>
+                  측정 전
+                </dt>
+                <dd>
+                  진행 중 — 성과 측정 전
+                </dd>
+              </dl>
+              <p class="gallery-service">GEO · SEO</p>
+            </article>
+            <article class="gallery-card" data-project data-cursor="lens" data-industry="b2b" data-service="geo seo" data-status="progress" data-name="TYM" data-search="tym 산업재 b2b geo seo">
+              <div class="gallery-cover" aria-hidden="true">
+                <span class="gallery-cover-name">TYM</span>
+                <span class="gallery-cover-service">GEO · SEO</span>
+                <span class="gallery-cover-orbit"><img class="gallery-cover-ring" src="./assets/images/gallery-cover-ring-lg.svg" alt="" width="200" height="200"><img class="gallery-cover-ring gallery-cover-ring--sm" src="./assets/images/gallery-cover-ring-sm.svg" alt="" width="110" height="110"><img class="gallery-cover-dot" src="./assets/images/gallery-cover-dot.svg" alt="" width="12" height="12"></span>
+              </div>
+              <p class="gallery-meta"><span>산업재·B2B</span><span aria-hidden="true">·</span><span>진행 중</span></p>
+              <h3>
+                <a href="./projects/tym.html">
+                  TYM
+                </a>
+              </h3>
+              <p class="gallery-desc">제품 · 그룹 사이트 검색 최적화 검수</p>
+              <dl class="gallery-fact">
+                <dt>
+                  측정 전
+                </dt>
+                <dd>
+                  진행 중 — 성과 측정 전
+                </dd>
+              </dl>
+              <p class="gallery-service">GEO · SEO</p>
+            </article>
+            <article class="gallery-card" data-project data-cursor="lens" data-industry="dutyfree" data-service="seo ga" data-status="complete" data-name="신세계면세점" data-search="신세계면세점 면세 seo ga">
+              <div class="gallery-cover" aria-hidden="true">
+                <span class="gallery-cover-name">신세계면세점</span>
+                <span class="gallery-cover-service">SEO · GA</span>
+                <span class="gallery-cover-orbit"><img class="gallery-cover-ring" src="./assets/images/gallery-cover-ring-lg.svg" alt="" width="200" height="200"><img class="gallery-cover-ring gallery-cover-ring--sm" src="./assets/images/gallery-cover-ring-sm.svg" alt="" width="110" height="110"><img class="gallery-cover-dot" src="./assets/images/gallery-cover-dot.svg" alt="" width="12" height="12"></span>
+              </div>
+              <p class="gallery-meta"><span>면세</span><span aria-hidden="true">·</span><span>완료</span></p>
+              <h3>
+                <a href="./projects/shinsegae-dutyfree.html">
+                  신세계면세점
+                </a>
+              </h3>
+              <p class="gallery-desc">차세대 구축 SEO Migration · 다국어 SEO 전략</p>
+              <dl class="gallery-fact">
+                <dt>
+                  60%
+                </dt>
+                <dd>
+                  자연 검색 트래픽 개선 · 조건 확인 중 ⓘ
+                </dd>
+              </dl>
+              <p class="gallery-service">SEO · GA</p>
+            </article>
+            <article class="gallery-card" data-project data-cursor="lens" data-industry="hotel" data-service="seo ga" data-status="complete" data-name="야놀자" data-search="야놀자 숙박 seo ga">
+              <div class="gallery-cover" aria-hidden="true">
+                <span class="gallery-cover-name">야놀자</span>
+                <span class="gallery-cover-service">SEO · GA</span>
+                <span class="gallery-cover-orbit"><img class="gallery-cover-ring" src="./assets/images/gallery-cover-ring-lg.svg" alt="" width="200" height="200"><img class="gallery-cover-ring gallery-cover-ring--sm" src="./assets/images/gallery-cover-ring-sm.svg" alt="" width="110" height="110"><img class="gallery-cover-dot" src="./assets/images/gallery-cover-dot.svg" alt="" width="12" height="12"></span>
+              </div>
+              <p class="gallery-meta"><span>숙박</span><span aria-hidden="true">·</span><span>완료</span></p>
+              <h3>
+                <a href="./projects/yanolja.html">
+                  야놀자
+                </a>
+              </h3>
+              <p class="gallery-desc">행태 기반 키워드 · 콘텐츠 타겟팅 · SEO 운영 가이드</p>
+              <dl class="gallery-fact">
+                <dt>
+                  434%
+                </dt>
+                <dd>
+                  자연 검색 증가 · 조건 확인 중 ⓘ
+                </dd>
+              </dl>
+              <p class="gallery-service">SEO · GA</p>
+            </article>
+            <article class="gallery-card" data-project data-cursor="lens" data-industry="mobility" data-service="geo" data-status="complete" data-name="42dot" data-search="42dot 포티투닷 모빌리티 geo">
+              <div class="gallery-cover gallery-cover--image" aria-hidden="true">
+                <span class="gallery-cover-label">IMG · 승인 화면 (img + alt)</span>
+              </div>
+              <p class="gallery-meta"><span>모빌리티</span><span aria-hidden="true">·</span><span>완료</span><span class="gallery-badge">사례 문서</span></p>
+              <h3>
+                <a href="./projects/42dot.html">
+                  42dot
+                </a>
+              </h3>
+              <p class="gallery-desc">채용 페이지 GEO — 채용 콘텐츠의 생성형 검색 대응</p>
+              <dl class="gallery-fact">
+                <dt>
+                  15.0 → 40.1
+                </dt>
+                <dd>
+                  AI 가시성 점수 · 조건 확인 중 ⓘ
+                </dd>
+              </dl>
+              <p class="gallery-service">GEO</p>
+            </article>
+          </div>
+          <p class="empty-state" id="empty-state" hidden>조건에 맞는 프로젝트가 없습니다.</p>
+          <div class="more-row">
+            <button type="button" id="more-button" data-cursor="signal">
+              더 보기 · 12건
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="faq" id="faq" data-section="faq">
+      <div class="shell">
+        <h2 data-animate>
+          자주 묻는 질문
+        </h2>
+        <div class="faq-list" data-animate>
+          <article class="faq-item open">
+            <button type="button" data-cursor="lens" aria-expanded="true">
+              <strong>
+                엑셀리언트는 어떤 업종의 프로젝트를 했나요?
+              </strong>
+              <span class="faq-icon" aria-hidden="true"><img src="./assets/images/icon-plus.svg" alt="" width="24" height="24"></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>산업재·B2B · 헬스케어 · 모빌리티 · 뷰티 · 면세 · 숙박 · 소비재 · 여행·항공 8개 업종에서 19건을 공개하고 있습니다.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button type="button" data-cursor="lens" aria-expanded="false">
+              <strong>
+                진행 중인 GEO 프로젝트에는 왜 성과 수치가 없나요?
+              </strong>
+              <span class="faq-icon" aria-hidden="true"><img src="./assets/images/icon-plus.svg" alt="" width="24" height="24"></span>
+            </button>
+            <div class="faq-answer" inert>
+              <div class="faq-answer-inner">
+                <p>충분한 검증 기간을 거치고 고객사와 공개 범위를 합의한 뒤 성과 수치를 공개합니다.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button type="button" data-cursor="lens" aria-expanded="false">
+              <strong>
+                성과 수치 옆 ⓘ는 무엇인가요?
+              </strong>
+              <span class="faq-icon" aria-hidden="true"><img src="./assets/images/icon-plus.svg" alt="" width="24" height="24"></span>
+            </button>
+            <div class="faq-answer" inert>
+              <div class="faq-answer-inner">
+                <p>측정 기간, 비교 기준, 데이터 출처 등 수치를 이해하는 데 필요한 기준을 안내하는 표시입니다.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item">
+            <button type="button" data-cursor="lens" aria-expanded="false">
+              <strong>
+                프로젝트 문의는 무엇을 준비하면 되나요?
+              </strong>
+              <span class="faq-icon" aria-hidden="true"><img src="./assets/images/icon-plus.svg" alt="" width="24" height="24"></span>
+            </button>
+            <div class="faq-answer" inert>
+              <div class="faq-answer-inner">
+                <p>사이트 주소, 개선하려는 목표, 현재 분석 환경을 알려주시면 적합한 진단 범위를 정리해 드립니다.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- @component cta -->
+    <section class="contact" id="contact" data-section="contact">
+      <div class="shell" data-animate>
+        <h2>
+          비슷한 과제가 있나요
+          <img src="./assets/images/cta-mark.svg" alt="" width="16" height="32">
+        </h2>
+        <p>사이트 주소, 개선하려는 목표, 현재 분석 환경을 알려주시면 진단 범위를 정리해 회신합니다.</p>
+        <a href="mailto:hello@exelient.co.kr" data-cursor="signal" data-cursor-theme="dark" data-cursor-lens="ink">
+          프로젝트 문의 ↗
+        </a>
+      </div>
+    </section>
+    <!-- /@component -->
+  </main>
+  <!-- @component footer -->
+  <footer class="site-footer" id="footer" data-section="footer">
+    <div class="footer-inner">
+      <div class="footer-grid" data-animate>
+        <div class="footer-about">
+          <a class="footer-brand" href="#top" data-cursor="signal">
+            [ ].exelient
+          </a>
+          <p>엑셀리언트(EXELIENT)<br>검색과 생성형 답변에서 정확하게 설명되는 콘텐츠</p>
+        </div>
+        <div class="footer-col">
+          <h3>
+            GEO/SEO
+          </h3>
+          <ul>
+            <li>
+              GEO 확장 서비스 개요
+            </li>
+            <li>
+              사전 진단 · 컨설팅
+            </li>
+            <li>
+              콘텐츠 고도화
+            </li>
+            <li>
+              SEO 테크 진단 · 가이드
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>
+            GA
+          </h3>
+          <ul>
+            <li>
+              GA 서비스 개요
+            </li>
+            <li>
+              수집 진단
+            </li>
+            <li>
+              대시보드 · 리포팅
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>
+            EXELIENT
+          </h3>
+          <ul>
+            <li>
+              회사 개요
+            </li>
+            <li>
+              클라이언트
+            </li>
+            <li>
+              채용
+            </li>
+            <li>
+              온라인 문의
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>개인정보 처리방침 · 이용약관 · © 2026 EXELIENT · exelient.co.kr</p>
+      </div>
+    </div>
+  </footer>
+  <!-- /@component -->
+  <!-- @component floating-cta -->
+  <a class="fab" href="#contact" aria-label="GEO 진단 체험" data-surface="dark">
+    <svg class="fab-stroke" aria-hidden="true" focusable="false">
+      <rect x="0" y="0" width="100%" height="100%" rx="7" ry="7" pathLength="100"></rect>
+    </svg>
+    <img class="fab-bracket fab-bracket--open" src="./assets/images/fab-bracket-open.svg" alt="">
+    <span class="fab-label">GEO 진단 체험</span>
+    <img class="fab-bracket fab-bracket--close" src="./assets/images/fab-bracket-close.svg" alt="">
+    <img class="fab-dot" src="./assets/images/fab-dot.svg" alt="">
+    <span class="fab-exe" aria-hidden="true">exe</span>
+  </a>
+  <!-- /@component -->
+  <script src="./js/common.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/smooth-scroll.js"></script>
+  <script src="./js/interaction.js"></script>
+</body>
+</html>
